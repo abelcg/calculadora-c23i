@@ -4,16 +4,24 @@ let buttons = document.querySelectorAll('button');
 
 //console.log(buttons);
 
-let screenValue = "";
+let screenValue = ""; //variable muleta que irá recolectando el valor de la pantalla
 /* 
+const handleFocus = (event) => {     focus cuando clickeo en el input y el cuersos titila, blur cuando me voy con tab
+    todo evento genera un objeto event 
+    console.log(event);
+} 
+
 const handleChange = (e) => {
     console.log(e.target.value);
 } */
 
+//en vez ed agregar como un atributo el evento en cada etiqueta buuton lo haremos con un addevenlistener
+//screen.addEventListener('change', handleFocus)
 //screen.addEventListener('change', handleChange)
 
 for(let item of buttons) {
     item.addEventListener('click', (e)=>{
+       //console.log(e.target.innerHTML);
        let buttonText = e.target.innerHTML;
        console.log('Button text is ' + buttonText);
     
